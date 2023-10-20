@@ -3,6 +3,7 @@ simonSays();
 function simonSays(){
     /* variables section */
    const numbersContainer = document.getElementById('numbers-container');
+   const inputContainer = document.getElementById('input-container');
    const numbersToGenerate = 5;
    const generatedNumbers = [];
    
@@ -21,7 +22,6 @@ function simonSays(){
    setTimeout(play, 3000);
    function play(){
     numbersContainer.classList.add('d-none');
-
+    inputContainer.classList.remove('d-none');
    };
-
 };
