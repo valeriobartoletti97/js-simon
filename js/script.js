@@ -1,16 +1,19 @@
 "use strict";
 simonSays();
 function simonSays(){
-    /* variables section */
-   const numbersContainer = document.getElementById('numbers-container');
-   const inputContainer = document.getElementById('input-container');
-   const result = document.getElementById('result');
-   const resetBtn = document.getElementById('reset-btn');
-   const numbersToGenerate = 5;
-   const generatedNumbers = [];
-   let score = 0;
-   let userNumbers = [];
+  /* variables section */
+  const numbersContainer = document.getElementById('numbers-container');
+  const inputContainer = document.getElementById('input-container');
+  const result = document.getElementById('result');
+  const resetBtn = document.getElementById('reset-btn');
+  let score = 0;
+  myReset();
+  play();
+  function play(){
    /* generating numbers */
+  const numbersToGenerate = 5;
+  const generatedNumbers = [];
+  let userNumbers = [];
    while(generatedNumbers.length < numbersToGenerate){
     let numberGenerated = getRndInteger(1, 100);
     console.log(numberGenerated)
@@ -63,14 +66,16 @@ function simonSays(){
     inputContainer.classList.add('d-none');
     result.classList.remove('d-none');
     resetBtn.classList.remove('d-none');
-   }
+   };
+  };
 
-   /* reset */
-   resetBtn.addEventListener('click',reset);
-   function reset(){
-    score = 0
-    result.classList.add('d-none');
-    resetBtn.classList.add('d-none');
-    numbersContainer.classList.remove('d-none')
-   }
+  /* reset */
+  resetBtn.addEventListener('click',myReset);
+  function myReset(){
+   score = 0
+   result.classList.add('d-none');
+   resetBtn.classList.add('d-none');
+   numbersContainer.classList.remove('d-none')
+   play();
+  };
 };
