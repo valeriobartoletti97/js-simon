@@ -19,3 +19,7 @@ input{
     background-color: var(--selective-yellow);
     border-radius: 8px;
 }
+#result{
+    color: var(--ut-orange);
+    font-size: 1.5em;
+}
