@@ -5,13 +5,17 @@
  --selective-yellow: #ffb703ff;
  --ut-orange: #fb8500ff; 
 }
-#app{
+body{
     background-color: var(--prussian-blue)
 }
-#container{
+#numbers-container{
     color: var(--ut-orange);
 }
 .my-numbers{
     font-size: 3em;
     word-spacing: 30px;
+}
+input{
+    background-color: var(--selective-yellow);
+    border-radius: 8px;
 }

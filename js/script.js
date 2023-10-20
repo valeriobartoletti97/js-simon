@@ -1,10 +1,12 @@
 "use strict";
 simonSays();
 function simonSays(){
-   const appContainer = document.getElementById('container');
+    /* variables section */
+   const numbersContainer = document.getElementById('numbers-container');
    const numbersToGenerate = 5;
    const generatedNumbers = [];
-
+   
+   /* generating numbers */
    while(generatedNumbers.length < numbersToGenerate){
     let numberGenerated = getRndInteger(1, 100);
     console.log(numberGenerated)
@@ -13,5 +15,13 @@ function simonSays(){
     };
    };
    console.log(generatedNumbers);
-   appContainer.innerHTML = generatedNumbers.join(' ')
-}
+   numbersContainer.innerHTML = generatedNumbers.join(' ')
+
+   /* timeout */
+   setTimeout(play, 3000);
+   function play(){
+    numbersContainer.classList.add('d-none');
+
+   };
+
+};
