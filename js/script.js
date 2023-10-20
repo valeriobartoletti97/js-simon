@@ -5,6 +5,7 @@ function simonSays(){
    const numbersContainer = document.getElementById('numbers-container');
    const inputContainer = document.getElementById('input-container');
    const result = document.getElementById('result');
+   const resetBtn = document.getElementById('reset-btn');
    const numbersToGenerate = 5;
    const generatedNumbers = [];
    let score = 0;
@@ -29,7 +30,7 @@ function simonSays(){
 
    const inputEl = document.getElementsByTagName('input');
    /* console.log(inputEl) */
-   const btn = document.querySelector('.btn');
+   const btn = document.querySelector('.btn-success');
    
    /* button click */
    btn.addEventListener('click', function(){
@@ -61,5 +62,15 @@ function simonSays(){
     result.innerHTML = 'Il tuo punteggio è : ' + score + msg;
     inputContainer.classList.add('d-none');
     result.classList.remove('d-none');
+    resetBtn.classList.remove('d-none');
+   }
+
+   /* reset */
+   resetBtn.addEventListener('click',reset);
+   function reset(){
+    score = 0
+    result.classList.add('d-none');
+    resetBtn.classList.add('d-none');
+    numbersContainer.classList.remove('d-none')
    }
 };

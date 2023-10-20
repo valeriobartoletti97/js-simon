@@ -23,3 +23,6 @@ input{
     color: var(--ut-orange);
     font-size: 1.5em;
 }
+#reset-btn{
+    background-color: var(--selective-yellow);
+}
